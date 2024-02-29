@@ -169,7 +169,7 @@ with col7:
 with col8:
     st.plotly_chart(bar_char_gestor,use_container_width=True)
 with col9:
-    st.plotly_chart(pie_chart,use_container_width=True)
+    st.plotly_chart(pie_chart_valor,use_container_width=True)
 
 with col10:
     st.plotly_chart(bar_char_avaliacao,use_container_width=True)   
