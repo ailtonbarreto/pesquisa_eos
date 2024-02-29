@@ -224,7 +224,7 @@ imagem = """
     <style>
     [data-testid="element-container"]
     {
-    visibility: hidden;
+    text-align: center;
     }
     </style>
 """
