@@ -177,7 +177,7 @@ with col10:
 with col11:
     st.title("Acessar Pesquisa",anchor=False)
     st.image("link.png",width=300,)
-st.write(pie_chart_valor)   
+ 
 #-----------------------------------------------------------------------------------------------------------------------------
 #CSS
 
