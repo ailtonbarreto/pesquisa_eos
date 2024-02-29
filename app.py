@@ -124,11 +124,11 @@ pie_chart_valor = px.pie(dfpie_valor,names=["Sim", "Não"],values='Conexão com 
 
 bar_char_gestor = px.bar(contagem_categorias, x=contagem_categorias.values, y=contagem_categorias.index, 
                 title='Como Você Avalia seu Gestor',orientation='h')
-# bar_char_gestor.update_xaxes(showgrid=False,visible = False)
-# bar_char_gestor.update_traces(showlegend=False)
-# bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
-# bar_char_gestor.layout.xaxis.fixedrange = True
-# bar_char_gestor.layout.yaxis.fixedrange = True
+bar_char_gestor.update_xaxes(showgrid=False,visible = False)
+bar_char_gestor.update_traces(showlegend=False)
+bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
+bar_char_gestor.layout.xaxis.fixedrange = True
+bar_char_gestor.layout.yaxis.fixedrange = True
 
 
 
