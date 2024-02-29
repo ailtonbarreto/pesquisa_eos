@@ -220,12 +220,12 @@ st.markdown(desativartelacheia,unsafe_allow_html=True)
 
 
 
-# imagem = """
-#     <style>
-#     [class="st-emotion-cache-1kyxreq e115fcil2"]
-#     {
-    
-#     }
-#     </style>
-# """
-# st.markdown(imagem,unsafe_allow_html=True)
+imagem = """
+    <style>
+    [class="st-emotion-cache-1kyxreq e115fcil2"]
+    {
+        align-items: center;
+    }
+    </style>
+"""
+st.markdown(imagem,unsafe_allow_html=True)
