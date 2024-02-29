@@ -222,7 +222,7 @@ st.markdown(desativartelacheia,unsafe_allow_html=True)
 
 imagem = """
     <style>
-    [data-testid="element-container"]
+    [data-testid="stImage"]
     {
     text-align: center;
     }
