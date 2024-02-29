@@ -73,48 +73,48 @@ categorias = {'Muito bom': 'Muito bom','Ótimo': 'Ótimo','Bom': 'Bom','Ruim': '
 
 
 
-# df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
+df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
 
 
-# contagem_categorias = df['Categoria'].value_counts().sort_values(ascending=True)
+contagem_categorias = df['Categoria'].value_counts().sort_values(ascending=True)
 
 
-# df_count = len(df)
-# count_nao = (df['Valorização'] == 'Sim').sum()
-# nivel_satisfacao = (count_nao/df_count)*100
-# nivel_satisfacao = "{:.0f}%".format(nivel_satisfacao)
+df_count = len(df)
+count_nao = (df['Valorização'] == 'Sim').sum()
+nivel_satisfacao = (count_nao/df_count)*100
+nivel_satisfacao = "{:.0f}%".format(nivel_satisfacao)
 
-# df_aprogestao = len(df)
-# count_sim = (df['Você Aprova a Forma como a Empresa é Dirigida?'] == 'Sim').sum()
-# aprovacao = (count_sim/df_aprogestao)*100
-# aprovacao = "{:.0f}%".format(aprovacao)
+df_aprogestao = len(df)
+count_sim = (df['Você Aprova a Forma como a Empresa é Dirigida?'] == 'Sim').sum()
+aprovacao = (count_sim/df_aprogestao)*100
+aprovacao = "{:.0f}%".format(aprovacao)
 
 
 
-# with col10:
-#     filtro_gestor = st.multiselect("Filtrar Gestor",df['Gestor'].unique())
+with col10:
+    filtro_gestor = st.multiselect("Filtrar Gestor",df['Gestor'].unique())
 
-# contagem_avaliacoes = df.groupby(['Gestor', 'Como você avalia o seu Gestor?']).size().reset_index(name='Contagem')
+contagem_avaliacoes = df.groupby(['Gestor', 'Como você avalia o seu Gestor?']).size().reset_index(name='Contagem')
 
-# contagem_avaliacoes = contagem_avaliacoes.query('Gestor == @filtro_gestor')
+contagem_avaliacoes = contagem_avaliacoes.query('Gestor == @filtro_gestor')
 
-# contagem_avaliacoes = contagem_avaliacoes.sort_values('Contagem',ascending=False)
+contagem_avaliacoes = contagem_avaliacoes.sort_values('Contagem',ascending=False)
 
-# df_felicidade = round(df['Nivel de Felicidade'].mean())
+df_felicidade = round(df['Nivel de Felicidade'].mean())
 
 
     
 
-# #-----------------------------------------------------------------------------------------------------------------------------
-# #charts
+#-----------------------------------------------------------------------------------------------------------------------------
+#charts
 
 
-# bar_chart = px.bar(dfbar, x="Nivel de Felicidade", y='Avaliação',orientation="h",title="Nível de Felicidade")
-# bar_chart.update_xaxes(showgrid=False,visible = False)
-# bar_chart.update_traces(showlegend=False)
-# bar_chart.update_yaxes(showgrid=False,visible=True,title="")
-# bar_chart.layout.xaxis.fixedrange = True
-# bar_chart.layout.yaxis.fixedrange = True
+bar_chart = px.bar(dfbar, x="Nivel de Felicidade", y='Avaliação',orientation="h",title="Nível de Felicidade")
+bar_chart.update_xaxes(showgrid=False,visible = False)
+bar_chart.update_traces(showlegend=False)
+bar_chart.update_yaxes(showgrid=False,visible=True,title="")
+bar_chart.layout.xaxis.fixedrange = True
+bar_chart.layout.yaxis.fixedrange = True
 
 
 
@@ -122,101 +122,99 @@ pie_chart1 = px.pie(dfpie, names=["Sim", "Não"], values='Valorização',title="
 
 pie_chart_valor = px.pie(dfpie_valor,names=["Sim", "Não"],values='Conexão com Colegas',title='Sentimento de Conexão com Colegas')
 
-with col1:
-    st.table(dfpie)
 
-# #-----------------------------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------------------------
 
-# bar_char_gestor = px.bar(contagem_categorias, x=contagem_categorias.values, y=contagem_categorias.index, 
-#                 title='Como Você Avalia seu Gestor',orientation='h')
-# bar_char_gestor.update_xaxes(showgrid=False,visible = False)
-# bar_char_gestor.update_traces(showlegend=False)
-# bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
-# bar_char_gestor.layout.xaxis.fixedrange = True
-# bar_char_gestor.layout.yaxis.fixedrange = True
+bar_char_gestor = px.bar(contagem_categorias, x=contagem_categorias.values, y=contagem_categorias.index, 
+                title='Como Você Avalia seu Gestor',orientation='h')
+bar_char_gestor.update_xaxes(showgrid=False,visible = False)
+bar_char_gestor.update_traces(showlegend=False)
+bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
+bar_char_gestor.layout.xaxis.fixedrange = True
+bar_char_gestor.layout.yaxis.fixedrange = True
 
 
 
 
 
-# bar_char_avaliacao = px.bar(contagem_avaliacoes, x='Gestor', y="Contagem",orientation='v',category_orders={'Como você avalia o seu Gestor?':categorias},barmode="stack",
-#                     color_discrete_sequence=["#12b2fe","#00a8e8","#12b2fe","#d00000","#2ec4b6","#2ec4b6","#f94144"],
-#                     color='Como você avalia o seu Gestor?', title='Avaliações Por Gestor')
-# bar_char_avaliacao.update_xaxes(showgrid=False,visible = True)
-# bar_char_avaliacao.update_yaxes(showgrid=False,visible=False,title="")
-# bar_char_avaliacao.layout.xaxis.fixedrange = True
-# bar_char_avaliacao.layout.yaxis.fixedrange = True
+bar_char_avaliacao = px.bar(contagem_avaliacoes, x='Gestor', y="Contagem",orientation='v',category_orders={'Como você avalia o seu Gestor?':categorias},barmode="stack",
+                    color_discrete_sequence=["#12b2fe","#00a8e8","#12b2fe","#d00000","#2ec4b6","#2ec4b6","#f94144"],
+                    color='Como você avalia o seu Gestor?', title='Avaliações Por Gestor')
+bar_char_avaliacao.update_xaxes(showgrid=False,visible = True)
+bar_char_avaliacao.update_yaxes(showgrid=False,visible=False,title="")
+bar_char_avaliacao.layout.xaxis.fixedrange = True
+bar_char_avaliacao.layout.yaxis.fixedrange = True
 
 
-# #-----------------------------------------------------------------------------------------------------------------------------
-# #charts
+#-----------------------------------------------------------------------------------------------------------------------------
+#charts
 
 
-# with col1:  
-#     st.metric("Qtd Colaboradores",qtd_funcionario)
-# with col2:
-#     st.metric("Respostas",df_count)
-# with col3:
-#     st.metric("Se Sentem Valorizados",nivel_satisfacao)    
-# with col4:
-#     st.metric("Média Felicidade",df_felicidade)
-# with col5:
-#     st.metric("Aprovação Gestão",aprovacao)
+with col1:  
+    st.metric("Qtd Colaboradores",qtd_funcionario)
+with col2:
+    st.metric("Respostas",df_count)
+with col3:
+    st.metric("Se Sentem Valorizados",nivel_satisfacao)    
+with col4:
+    st.metric("Média Felicidade",df_felicidade)
+with col5:
+    st.metric("Aprovação Gestão",aprovacao)
 
-# with col6:
-#     st.plotly_chart(bar_chart,use_container_width=True)
-# with col7:
-#     st.plotly_chart(pie_chart_valor,use_container_width=True)   
+with col6:
+    st.plotly_chart(bar_chart,use_container_width=True)
+with col7:
+    st.plotly_chart(pie_chart_valor,use_container_width=True)   
     
-# with col8:
-#     st.plotly_chart(bar_char_gestor,use_container_width=True)
-# with col9:
-#     st.plotly_chart(pie_chart1,use_container_width=True)
+with col8:
+    st.plotly_chart(bar_char_gestor,use_container_width=True)
+with col9:
+    st.plotly_chart(pie_chart1,use_container_width=True)
 
-# with col10:
-#     st.plotly_chart(bar_char_avaliacao,use_container_width=True)   
+with col10:
+    st.plotly_chart(bar_char_avaliacao,use_container_width=True)   
 
-# with col11:
-#     st.title("Acessar Pesquisa",anchor=False)
-#     st.image("link.png",width=300,)
+with col11:
+    st.title("Acessar Pesquisa",anchor=False)
+    st.image("link.png",width=300,)
     
-# #-----------------------------------------------------------------------------------------------------------------------------
-# #CSS
+#-----------------------------------------------------------------------------------------------------------------------------
+#CSS
 
 
-# borderselect = """
-#     <style>
-#     [data-testid="column"]
-#     {
-#     padding: 15px;
-#     background-color: #003459;
-#     border-radius: 12px;
-#     opacity: 80%;
-#     }
-#     </style>
-# """
-# st.markdown(borderselect,unsafe_allow_html=True)
+borderselect = """
+    <style>
+    [data-testid="column"]
+    {
+    padding: 15px;
+    background-color: #003459;
+    border-radius: 12px;
+    opacity: 80%;
+    }
+    </style>
+"""
+st.markdown(borderselect,unsafe_allow_html=True)
 
 
-# detalhes = """
-#     <style>
-#     [class="modebar-container"]
-#     {
-#     visibility: hidden;
-#     }
-#     </style>
-# """
+detalhes = """
+    <style>
+    [class="modebar-container"]
+    {
+    visibility: hidden;
+    }
+    </style>
+"""
 
 
-# st.markdown(detalhes,unsafe_allow_html=True)
+st.markdown(detalhes,unsafe_allow_html=True)
 
-# desativartelacheia = """
-#     <style>
-#     [data-testid="StyledFullScreenButton"]
-#     {
-#     visibility: hidden;
-#     }
-#     </style>
-# """
-# st.markdown(desativartelacheia,unsafe_allow_html=True)
+desativartelacheia = """
+    <style>
+    [data-testid="StyledFullScreenButton"]
+    {
+    visibility: hidden;
+    }
+    </style>
+"""
+st.markdown(desativartelacheia,unsafe_allow_html=True)
 
