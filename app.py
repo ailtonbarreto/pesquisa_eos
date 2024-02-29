@@ -110,28 +110,28 @@ df_felicidade = round(df['Nivel de Felicidade'].mean())
 
 
 bar_chart = px.bar(dfbar, x="Nivel de Felicidade", y='Avaliação',orientation="h",title="Nível de Felicidade")
-# bar_chart.update_xaxes(showgrid=False,visible = False)
-# bar_chart.update_traces(showlegend=False)
-# bar_chart.update_yaxes(showgrid=False,visible=True,title="")
-# bar_chart.layout.xaxis.fixedrange = True
-# bar_chart.layout.yaxis.fixedrange = True
+bar_chart.update_xaxes(showgrid=False,visible = False)
+bar_chart.update_traces(showlegend=False)
+bar_chart.update_yaxes(showgrid=False,visible=True,title="")
+bar_chart.layout.xaxis.fixedrange = True
+bar_chart.layout.yaxis.fixedrange = True
 
 
 
-pie_chart1 = px.pie(dfpie, names=["Sim", "Não"], values='Valorização',title="Você sente-se valorizado pelo seu trabalho?")
+# pie_chart1 = px.pie(dfpie, names=["Sim", "Não"], values='Valorização',title="Você sente-se valorizado pelo seu trabalho?")
 
-pie_chart_valor = px.pie(dfpie_valor,names=["Sim", "Não"],values='Conexão com Colegas',title='Sentimento de Conexão com Colegas')
+# pie_chart_valor = px.pie(dfpie_valor,names=["Sim", "Não"],values='Conexão com Colegas',title='Sentimento de Conexão com Colegas')
 
 
 #-----------------------------------------------------------------------------------------------------------------------------
 
 bar_char_gestor = px.bar(contagem_categorias, x=contagem_categorias.values, y=contagem_categorias.index, 
                 title='Como Você Avalia seu Gestor',orientation='h')
-# bar_char_gestor.update_xaxes(showgrid=False,visible = False)
-# bar_char_gestor.update_traces(showlegend=False)
-# bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
-# bar_char_gestor.layout.xaxis.fixedrange = True
-# bar_char_gestor.layout.yaxis.fixedrange = True
+bar_char_gestor.update_xaxes(showgrid=False,visible = False)
+bar_char_gestor.update_traces(showlegend=False)
+bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
+bar_char_gestor.layout.xaxis.fixedrange = True
+bar_char_gestor.layout.yaxis.fixedrange = True
 
 
 
@@ -140,10 +140,10 @@ bar_char_gestor = px.bar(contagem_categorias, x=contagem_categorias.values, y=co
 bar_char_avaliacao = px.bar(contagem_avaliacoes, x='Gestor', y="Contagem",orientation='v',category_orders={'Como você avalia o seu Gestor?':categorias},barmode="stack",
                     color_discrete_sequence=["#12b2fe","#00a8e8","#12b2fe","#d00000","#2ec4b6","#2ec4b6","#f94144"],
                     color='Como você avalia o seu Gestor?', title='Avaliações Por Gestor')
-# bar_char_avaliacao.update_xaxes(showgrid=False,visible = True)
-# bar_char_avaliacao.update_yaxes(showgrid=False,visible=False,title="")
-# bar_char_avaliacao.layout.xaxis.fixedrange = True
-# bar_char_avaliacao.layout.yaxis.fixedrange = True
+bar_char_avaliacao.update_xaxes(showgrid=False,visible = True)
+bar_char_avaliacao.update_yaxes(showgrid=False,visible=False,title="")
+bar_char_avaliacao.layout.xaxis.fixedrange = True
+bar_char_avaliacao.layout.yaxis.fixedrange = True
 
 
 #-----------------------------------------------------------------------------------------------------------------------------
