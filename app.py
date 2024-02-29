@@ -145,8 +145,8 @@ bar_char_avaliacao.update_yaxes(showgrid=False,visible=False,title="")
 bar_char_avaliacao.layout.xaxis.fixedrange = True
 bar_char_avaliacao.layout.yaxis.fixedrange = True
 
-st.table(dfpie)
-# st.table(dfpie_valor)
+
+st.table(dfpie_valor)
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #charts
