@@ -122,6 +122,9 @@ pie_chart = px.pie(dfpie, names=["Sim", "Não"], values='Valorização',title="V
 
 pie_chart_valor = px.pie(dfpie_valor,names=["Sim", "Não"],values='Conexão com Colegas',title='Sentimento de Conexão com Colegas')
 
+
+#-----------------------------------------------------------------------------------------------------------------------------
+
 bar_char_gestor = px.bar(contagem_categorias, x=contagem_categorias.values, y=contagem_categorias.index, 
                 title='Como Você Avalia seu Gestor',orientation='h')
 bar_char_gestor.update_xaxes(showgrid=False,visible = False)
