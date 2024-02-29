@@ -155,11 +155,11 @@ with col1:
 with col2:
     st.metric("Respostas",f'{df_count} 📝')
 with col3:
-    st.metric("Se Sentem Valorizados",nivel_satisfacao)    
+    st.metric("Se Sentem Valorizados",f'{nivel_satisfacao} 🏆')    
 with col4:
-    st.metric("Média Felicidade",df_felicidade)
+    st.metric("Média Felicidade",f'{df_felicidade} 😀')
 with col5:
-    st.metric("Aprovação Gestão",aprovacao)
+    st.metric("Aprovação Gestão",f'{aprovacao} 👍')
 
 with col6:
     st.plotly_chart(bar_chart,use_container_width=True)
