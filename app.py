@@ -123,7 +123,7 @@ pie_chart1 = px.pie(dfpie, names=["Sim", "Não"], values='Valorização',title="
 pie_chart_valor = px.pie(dfpie_valor,names=["Sim", "Não"],values='Conexão com Colegas',title='Sentimento de Conexão com Colegas')
 
 with col1:
-    st.plotly_chart(pie_chart1)
+    st.table(dfpie)
 
 # #-----------------------------------------------------------------------------------------------------------------------------
 
