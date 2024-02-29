@@ -118,7 +118,7 @@ bar_chart.layout.yaxis.fixedrange = True
 
 
 
-pie_chart = px.pie(dfpie, names=["Sim", "Não"], values='Valorização',title="Você sente-se valorizado pelo seu trabalho?")
+pie_chart1 = px.pie(dfpie, names=["Sim", "Não"], values='Valorização',title="Você sente-se valorizado pelo seu trabalho?")
 
 pie_chart_valor = px.pie(dfpie_valor,names=["Sim", "Não"],values='Conexão com Colegas',title='Sentimento de Conexão com Colegas')
 
@@ -169,7 +169,7 @@ with col7:
 with col8:
     st.plotly_chart(bar_char_gestor,use_container_width=True)
 with col9:
-    st.plotly_chart(pie_chart,use_container_width=True)
+    st.plotly_chart(pie_chart1,use_container_width=True)
 
 with col10:
     st.plotly_chart(bar_char_avaliacao,use_container_width=True)   
