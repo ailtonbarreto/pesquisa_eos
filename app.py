@@ -145,6 +145,8 @@ bar_char_avaliacao.update_yaxes(showgrid=False,visible=False,title="")
 bar_char_avaliacao.layout.xaxis.fixedrange = True
 bar_char_avaliacao.layout.yaxis.fixedrange = True
 
+st.table(pie_chart1)
+st.table(pie_chart_valor)
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #charts
