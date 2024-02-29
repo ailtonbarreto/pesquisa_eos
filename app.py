@@ -182,41 +182,39 @@ with col11:
 #CSS
 
 
-borderselect = """
-    <style>
-    [data-testid="column"]
-    {
-    padding: 15px;
-    background-color: #003459;
-    border-radius: 12px;
-    opacity: 80%;
-    }
-    </style>
-"""
-st.markdown(borderselect,unsafe_allow_html=True)
+# borderselect = """
+#     <style>
+#     [data-testid="column"]
+#     {
+#     padding: 15px;
+#     background-color: #003459;
+#     border-radius: 12px;
+#     opacity: 80%;
+#     }
+#     </style>
+# """
+# st.markdown(borderselect,unsafe_allow_html=True)
 
 
+# detalhes = """
+#     <style>
+#     [class="modebar-container"]
+#     {
+#     visibility: hidden;
+#     }
+#     </style>
+# """
 
 
-detalhes = """
-    <style>
-    [class="modebar-container"]
-    {
-    visibility: hidden;
-    }
-    </style>
-"""
+# st.markdown(detalhes,unsafe_allow_html=True)
 
-
-st.markdown(detalhes,unsafe_allow_html=True)
-
-desativartelacheia = """
-    <style>
-    [data-testid="StyledFullScreenButton"]
-    {
-    visibility: hidden;
-    }
-    </style>
-"""
-st.markdown(desativartelacheia,unsafe_allow_html=True)
+# desativartelacheia = """
+#     <style>
+#     [data-testid="StyledFullScreenButton"]
+#     {
+#     visibility: hidden;
+#     }
+#     </style>
+# """
+# st.markdown(desativartelacheia,unsafe_allow_html=True)
 
