@@ -208,17 +208,17 @@ bordercontainer = """
 st.markdown(bordercontainer,unsafe_allow_html=True)
 
 
-detalhes = """
-    <style>
-    [class="modebar-container"]
-    {
-    visibility: hidden;
-    }
-    </style>
-"""
+# detalhes = """
+#     <style>
+#     [class="modebar-container"]
+#     {
+#     visibility: hidden;
+#     }
+#     </style>
+# """
 
 
-st.markdown(detalhes,unsafe_allow_html=True)
+# st.markdown(detalhes,unsafe_allow_html=True)
 
 desativartelacheia = """
     <style>
