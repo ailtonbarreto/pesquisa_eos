@@ -146,8 +146,6 @@ bar_char_avaliacao.layout.xaxis.fixedrange = True
 bar_char_avaliacao.layout.yaxis.fixedrange = True
 
 
-st.table(dfpie_valor)
-
 #-----------------------------------------------------------------------------------------------------------------------------
 #charts
 
