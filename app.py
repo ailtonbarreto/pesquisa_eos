@@ -151,9 +151,9 @@ bar_char_avaliacao.layout.yaxis.fixedrange = True
 
 
 with col1:  
-    st.metric("Qtd Colaboradores",qtd_funcionario)
+    st.metric("Qtd Colaboradores",f'{qtd_funcionario} 👷‍♂️')
 with col2:
-    st.metric("Respostas",df_count)
+    st.metric("Respostas",f'{df_count} 📝')
 with col3:
     st.metric("Se Sentem Valorizados",nivel_satisfacao)    
 with col4:
