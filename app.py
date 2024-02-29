@@ -224,7 +224,7 @@ imagem = """
     <style>
     [class="st-emotion-cache-1kyxreq e115fcil2"]
     {
-    text-align: center;
+    pading-left: 20px;
     }
     </style>
 """
