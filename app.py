@@ -218,3 +218,14 @@ desativartelacheia = """
 """
 st.markdown(desativartelacheia,unsafe_allow_html=True)
 
+
+
+imagem = """
+    <style>
+    [data-testid="element-container"]
+    {
+    visibility: hidden;
+    }
+    </style>
+"""
+st.markdown(imagem,unsafe_allow_html=True)
