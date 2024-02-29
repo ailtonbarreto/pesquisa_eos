@@ -220,13 +220,13 @@ detalhes = """
 
 st.markdown(detalhes,unsafe_allow_html=True)
 
-# desativartelacheia = """
-#     <style>
-#     [data-testid="StyledFullScreenButton"]
-#     {
-#     visibility: hidden;
-#     }
-#     </style>
-# """
-# st.markdown(desativartelacheia,unsafe_allow_html=True)
+desativartelacheia = """
+    <style>
+    [data-testid="StyledFullScreenButton"]
+    {
+    visibility: hidden;
+    }
+    </style>
+"""
+st.markdown(desativartelacheia,unsafe_allow_html=True)
 
