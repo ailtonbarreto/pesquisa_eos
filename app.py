@@ -118,7 +118,7 @@ bar_chart.layout.yaxis.fixedrange = True
 
 
 
-pie_chart1 = line.pie(dfpie, names=["Sim", "Não"], values='Valorização',title="Você sente-se valorizado pelo seu trabalho?")
+pie_chart1 = px.line(dfpie, names=["Sim", "Não"], values='Valorização',title="Você sente-se valorizado pelo seu trabalho?")
 
 pie_chart_valor = px.pie(dfpie_valor,names=["Sim", "Não"],values='Conexão com Colegas',title='Sentimento de Conexão com Colegas')
 
