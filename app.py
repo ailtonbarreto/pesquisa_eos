@@ -197,16 +197,15 @@ st.markdown(borderselect,unsafe_allow_html=True)
 
 
 
-bordercontainer = """
-    <style>
-    [data-testid="block-container"]
-    {
-    color: white;
-    text-align: center;
-    }
-    </style>
-"""
-st.markdown(bordercontainer,unsafe_allow_html=True)
+# bordercontainer = """
+#     <style>
+#     [data-testid="block-container"]
+#     {
+#     color: white;
+#     }
+#     </style>
+# """
+# st.markdown(bordercontainer,unsafe_allow_html=True)
 
 
 detalhes = """
