@@ -9,9 +9,9 @@ import plotly_express as px
 st.set_page_config(page_title="Pesquisa de Satifação",layout="wide")
 
 #layout
-
-
-cola, = st.columns(1)
+st.title("Pesquisa de Satisfação Janeiro 2024", anchor= False)
+st.divider()
+cola,colb = st.columns(2)
 col1,col2,col3,col4, col5 = st.columns(5)
 col6,col7 = st.columns(2)
 col8, col9 = st.columns(2)
@@ -21,10 +21,6 @@ col11, = st.columns(1)
 with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html = True)
 
-with cola:
-    st.title("Pesquisa de Satisfação Janeiro 2024", anchor= False)
- 
-st.divider()
 
 
 #-----------------------------------------------------------------------------------------------------------------------------
