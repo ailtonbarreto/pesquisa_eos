@@ -122,7 +122,7 @@ bar_chart.layout.yaxis.fixedrange = True
 
 
 pie_chart1 = px.pie(dfpie, names="Valorização", values='count',color_discrete_sequence=["#06d6a0","#e63946"],
-                    title="Você sente-se valorizado pelo seu trabalho?",color='Valorização',category_orders={'Valorização':['Sim','Não']})
+                    title="Sentimento de Valorização do Trabalho",color='Valorização',category_orders={'Valorização':['Sim','Não']})
 
 pie_chart_valor = px.pie(dfpie_valor,names='Conexão com Colegas',color_discrete_sequence=["#06d6a0","#e63946"],
                     category_orders={'Valorização':['Sim','Não']},color='Conexão com Colegas',
@@ -133,7 +133,7 @@ pie_chart_valor = px.pie(dfpie_valor,names='Conexão com Colegas',color_discrete
 
 bar_char_gestor = px.bar(contagem_categorias, x=contagem_categorias.values, y=contagem_categorias.index,
                 color_discrete_sequence=["#ffffff","#ffffff"],
-                title='Como Você Avalia seu Gestor',orientation='h')
+                title='Avaliação do Gestor Imediato',orientation='h')
 bar_char_gestor.update_xaxes(showgrid=False,visible = False)
 bar_char_gestor.update_traces(showlegend=False)
 bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
