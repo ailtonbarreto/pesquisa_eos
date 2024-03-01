@@ -122,7 +122,7 @@ pie_chart1 = px.pie(dfpie, names="Valorização", values='count',color_discrete_
                     title="Você sente-se valorizado pelo seu trabalho?",color='Valorização',category_orders={'Valorização':['Sim','Não']})
 
 pie_chart_valor = px.pie(dfpie_valor,names='Conexão com Colegas',color_discrete_sequence=["#06d6a0","#e63946"],
-                    color='Valorização',category_orders={'Valorização':['Sim','Não']},
+                    color='Valorização',category_orders={'Conexão com Colegas':['Sim','Não']},
                     values='count',title='Sentimento de Conexão com Colegas')
 
 
