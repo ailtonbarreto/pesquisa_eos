@@ -11,7 +11,7 @@ st.set_page_config(page_title="Pesquisa de Satifação",layout="wide")
 #layout
 
 
-cola,colb = st.columns(2)
+cola, = st.columns(1)
 col1,col2,col3,col4, col5 = st.columns(5)
 col6,col7 = st.columns(2)
 col8, col9 = st.columns(2)
@@ -23,9 +23,6 @@ with open("style.css") as f:
 
 with cola:
     st.title("Pesquisa de Satisfação Janeiro 2024", anchor= False)
-with colb:
-   st.image("link.png",width=300,) 
-
  
 st.divider()
 
