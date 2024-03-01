@@ -132,7 +132,7 @@ pie_chart_valor = px.pie(dfpie_valor,names='Conexão com Colegas',color_discrete
 #-----------------------------------------------------------------------------------------------------------------------------
 
 bar_char_gestor = px.bar(contagem_categorias, x=contagem_categorias.values, y=contagem_categorias.index,color='Como você avalia o seu Gestor?',
-                color_discrete_sequence=["#12b2fe","#00a8e8","#12b2fe","#d00000","#2ec4b6","#2ec4b6","#f94144"],
+                color_discrete_sequence=["#12b2fe","#00a8e8","#12b2fe","#d00000","#2ec4b6","#2ec4b6","#f94144"],category_orders={'Como você avalia o seu Gestor?':categorias},
                 title='Como Você Avalia seu Gestor',orientation='h')
 bar_char_gestor.update_xaxes(showgrid=False,visible = False)
 bar_char_gestor.update_traces(showlegend=False)
