@@ -11,7 +11,6 @@ st.set_page_config(page_title="Pesquisa de Satifação",layout="wide")
 #layout
 st.title("Pesquisa de Satisfação Janeiro 2024", anchor= False)
 st.divider()
-cola,colb = st.columns(2)
 col1,col2,col3,col4, col5 = st.columns(5)
 col6,col7 = st.columns(2)
 col8, col9 = st.columns(2)
