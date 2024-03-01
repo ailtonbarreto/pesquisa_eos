@@ -109,7 +109,7 @@ df_felicidade = round(df['Nivel de Felicidade'].mean())
 #charts
 
 
-bar_chart = px.bar(dfbar, x="Nivel de Felicidade", y='Avaliação',orientation="h",title="Nível de Felicidade",color_discrete_sequence=["#000000","#000000"])
+bar_chart = px.bar(dfbar, x="Nivel de Felicidade", y='Avaliação',orientation="h",title="Nível de Felicidade",color_discrete_sequence=["#ffffff","#ffffff"])
 bar_chart.update_xaxes(showgrid=False,visible = False)
 bar_chart.update_traces(showlegend=False)
 bar_chart.update_yaxes(showgrid=False,visible=True,title="")
