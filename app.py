@@ -182,7 +182,7 @@ with col10:
 
 with col11:
     st.link_button("Acessar Pesquisa",url ='https://docs.google.com/forms/d/e/1FAIpQLSeyzFMc7bFvPgmHreIAOhIWOB9PugK7NfAIpbEr6ReXJORfjg/viewform?usp=sf_link')
-    # st.image("link.png",width=300,)
+    st.image("link.png",width=300,)
     
 #-----------------------------------------------------------------------------------------------------------------------------
 #CSS
