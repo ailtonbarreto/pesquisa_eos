@@ -197,6 +197,7 @@ borderselect = """
     background-color: #003459;
     border-radius: 12px;
     opacity: 85%;
+    text-align: center;
     }
     </style>
 """
