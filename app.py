@@ -118,7 +118,7 @@ bar_chart.layout.yaxis.fixedrange = True
 
 
 
-pie_chart1 = px.pie(dfpie, names="Valorização", values='count',color_discrete_sequence=["#941b0c","#06d6a0"]
+pie_chart1 = px.pie(dfpie, names="Valorização", values='count',color_discrete_sequence=["#941b0c","#06d6a0"],
                     title="Você sente-se valorizado pelo seu trabalho?",color='Valorização',category_orders={'Valorização':['Sim','Não']})
 
 pie_chart_valor = px.pie(dfpie_valor,names='Conexão com Colegas',values='count',title='Sentimento de Conexão com Colegas')
