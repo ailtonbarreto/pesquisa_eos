@@ -51,7 +51,7 @@ df['Avaliação'] = df['Nivel de Felicidade'].map(notas)
 
 dfbar = df
 dfbar = dfbar.groupby(dfbar["Avaliação"])["Nivel de Felicidade"].count().reset_index()
-dfbar = dfbar.sort_values("Nivel de Felicidade")
+dfbar = dfbar.sort_values("Nivel de Felicidade",ascending=True)
 
 qtd_funcionario = 120
 
