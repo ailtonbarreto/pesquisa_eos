@@ -15,7 +15,6 @@ col1,col2,col3,col4, col5 = st.columns(5)
 col6,col7 = st.columns(2)
 col8, col9 = st.columns(2)
 col10, = st.columns(1)
-col11, = st.columns(1)
 
 with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html = True)
