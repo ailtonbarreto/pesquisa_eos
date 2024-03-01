@@ -94,7 +94,7 @@ aprovacao = "{:.0f}%".format(aprovacao)
 
 
 with col10:
-    filtro_gestor = st.multiselect("Filtrar Gestor",df['Gestor'].unique(),default="all")
+    filtro_gestor = st.multiselect("Filtrar Gestor",df['Gestor'].unique(),default=["all"])
 
 contagem_avaliacoes = df.groupby(['Gestor', 'Como você avalia o seu Gestor?']).size().reset_index(name='Contagem')
 
