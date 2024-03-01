@@ -181,7 +181,7 @@ with col10:
     st.plotly_chart(bar_char_avaliacao,use_container_width=True)   
 
 with col11:
-    st.title("Acessar Pesquisa",url='https://docs.google.com/forms/d/e/1FAIpQLSeyzFMc7bFvPgmHreIAOhIWOB9PugK7NfAIpbEr6ReXJORfjg/viewform?usp=sf_link')
+    st.title("Acessar Pesquisa",anchor='https://docs.google.com/forms/d/e/1FAIpQLSeyzFMc7bFvPgmHreIAOhIWOB9PugK7NfAIpbEr6ReXJORfjg/viewform?usp=sf_link')
     # st.image("link.png",width=300,)
     
 #-----------------------------------------------------------------------------------------------------------------------------
