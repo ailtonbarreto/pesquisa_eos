@@ -72,12 +72,15 @@ dfpie_valor = df["Conexão com Colegas"].value_counts().reset_index()
 categorias = {'Muito bom': 1, 'Ótimo': 2, 'Bom': 3, 'Ruim': 4, 'Péssimo': 5, 'Excelente': 6, 'Muito ruim': 7}
 valor_order = {'Muito bom': 1, 'Ótimo': 2, 'Bom': 3, 'Ruim': 4, 'Péssimo': 5, 'Excelente': 6, 'Muito ruim': 7}
 
+
+
 df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
 
+contagem_categorias = df['Categoria'].value_counts().sort_values(ascending=False)
+
+contagem_categorias = contagem_categorias.map(valor_order)
 
 contagem_categorias = df['Categoria'].value_counts().sort_values(ascending=False)
-contagem_categorias['count'] = contagem_categorias.map(valor_order)
-
 #-----------------------------------------------------------------------------------------------------------------------------
 df_count = len(df)
 count_nao = (df['Valorização'] == 'Sim').sum()
