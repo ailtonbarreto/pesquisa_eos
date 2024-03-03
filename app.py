@@ -53,6 +53,8 @@ dfbar = df
 dfbar = dfbar.groupby(dfbar["Avaliação"])["Nivel de Felicidade"].count().reset_index()
 dfbar = dfbar.sort_values("Nivel de Felicidade",ascending=False)
 
+
+
 #-----------------------------------------------------------------------------------------------------------------------------
 #dataframe grafico de valorizacao
 
@@ -67,20 +69,18 @@ dfpie_valor = df["Conexão com Colegas"].value_counts().reset_index()
 #-----------------------------------------------------------------------------------------------------------------------------
 #dataframe gestor
 
-# Mapeamento das categorias para valores numéricos
-categorias = {'Muito bom': 1, 'Ótimo': 2, 'Bom': 3, 'Ruim': 4, 'Péssimo': 5, 'Excelente': 6, 'Muito ruim': 7}
+categorias = {'Muito bom': 'Muito bom','Ótimo': 'Ótimo','Bom': 'Bom','Ruim': 'Ruim','Péssimo': 'Péssimo','Excelente':'Excelente','Muito ruim':'Muito ruim'}
 
-# Mapeamento inverso para facilitar a leitura dos resultados
-valor_order = {1: 'Muito bom', 2: 'Ótimo', 3: 'Bom', 4: 'Ruim', 5: 'Péssimo', 6: 'Excelente', 7: 'Muito ruim'}
 
-# Mapear os valores da coluna 'Como você avalia o seu Gestor?' para as categorias definidas
+#-----------------------------------------------------------------------------------------------------------------------------
+
 df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
 
-# Contagem das categorias mapeadas
-contagem_categorias = df['Categoria'].value_counts()
 
-# Ordenar a contagem de categorias pela categoria original
-contagem_categorias = contagem_categorias.sort_index(key=lambda x: x.map(valor_order))
+contagem_categorias = df['Categoria'].value_counts().sort_values(ascending=False)
+
+
+
 
 #-----------------------------------------------------------------------------------------------------------------------------
 df_count = len(df)
@@ -220,8 +220,8 @@ with st.expander("Acessar Pesquisa",expanded=False):
     st.image("link.png",width=300)
     st.link_button("Acessar",url ='https://docs.google.com/forms/d/e/1FAIpQLSeyzFMc7bFvPgmHreIAOhIWOB9PugK7NfAIpbEr6ReXJORfjg/viewform?usp=sf_link')
  
-st.table(categorias)
-st.table(contagem_categorias)
+
+    
 #-----------------------------------------------------------------------------------------------------------------------------
 #CSS
 
