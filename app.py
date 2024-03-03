@@ -236,7 +236,8 @@ borderselect = """
     [data-testid="column"]
     {
     padding: 15px;
-    background-color: black;
+    background-color: #003459;
+    border-color: white;
     border-radius: 12px;
     opacity: 97%;
     text-align: center;
