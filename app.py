@@ -53,7 +53,7 @@ dfbar = df
 dfbar = dfbar.groupby(dfbar["Avaliação"])["Nivel de Felicidade"].count().reset_index()
 dfbar = dfbar.sort_values("Nivel de Felicidade",ascending=False)
 
-qtd_funcionario = 120
+
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #dataframe grafico de valorizacao
@@ -90,7 +90,7 @@ count_sim = (df['Você Aprova a Forma como a Empresa é Dirigida?'] == 'Sim').su
 aprovacao = (count_sim/df_aprogestao)*100
 aprovacao = "{:.0f}%".format(aprovacao)
 
-
+qtd_funcionario = df_count - 20
 
 with col10:
     filtro_gestor = st.multiselect("Filtrar Gestor", df['Gestor'].unique(), default=df['Gestor'].unique())
