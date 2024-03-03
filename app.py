@@ -128,7 +128,7 @@ else:
 
 
 bar_chart = px.bar(dfbar, x="Nivel de Felicidade", y='Avaliação',orientation="h",title="Nível de Felicidade",
-                color="Avaliação",category_orders={'Muito bom','Ótimo','Bom','Ruim','Péssimo','Excelente','Muito ruim'},
+                color="Avaliação",category_orders=['Muito bom','Ótimo','Bom','Ruim','Péssimo','Excelente','Muito ruim'],
                 color_discrete_sequence=["#ffffff","#ffffff"])
 bar_chart.update_xaxes(showgrid=False,visible = False)
 bar_chart.update_traces(showlegend=False)
