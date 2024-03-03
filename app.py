@@ -215,7 +215,7 @@ with col10:
 
 st.divider()
 # st.subheader('Acessar Pesquisa',anchor=False)
-with st.expander("Acessar Pesquisa",expanded=True):
+with st.expander("Acessar Pesquisa",expanded=False):
     st.image("link.png",width=300)
     st.link_button("Acessar",url ='https://docs.google.com/forms/d/e/1FAIpQLSeyzFMc7bFvPgmHreIAOhIWOB9PugK7NfAIpbEr6ReXJORfjg/viewform?usp=sf_link')
   
