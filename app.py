@@ -79,7 +79,7 @@ df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
 
 contagem_categorias = df['Categoria'].value_counts().sort_values(ascending=False)
 
-contagem_categorias - contagem_categorias.sort_values(ascending=False,axis='columns',ignore_index=True)
+contagem_categorias - contagem_categorias.sort_values(ascending=False)
 
 
 #-----------------------------------------------------------------------------------------------------------------------------
