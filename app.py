@@ -53,8 +53,6 @@ dfbar = df
 dfbar = dfbar.groupby(dfbar["Avaliação"])["Nivel de Felicidade"].count().reset_index()
 dfbar = dfbar.sort_values("Nivel de Felicidade",ascending=False)
 
-
-
 #-----------------------------------------------------------------------------------------------------------------------------
 #dataframe grafico de valorizacao
 
