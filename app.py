@@ -147,13 +147,17 @@ pie_chart_valor = px.pie(dfpie_valor,names='Conexão com Colegas',color_discrete
 #Avaliacao equipe de gestao
 
 bar_char_gestor = px.bar(contagem_categorias, 
-                          x="count",  # Contagem das categorias será o eixo x
-                          y=contagem_categorias.index,  # As categorias serão o eixo y
-                          color=contagem_categorias.index,  # Colorir as barras com base nas categorias
-                          color_discrete_sequence=["#38b000", "#00a8e8", "#12b2fe", "#e9724c", "#2ec4b6", "#70e000", "#f94144"],  # Esquema de cores
-                          title='Avaliação do Gestor Imediato',  # Título do gráfico
-                          orientation='h')  # Orientação horizontal
-
+                          x="count",
+                          y=contagem_categorias.index,
+                          color=contagem_categorias.index,
+                          color_discrete_sequence=["#38b000", "#00a8e8", "#12b2fe", "#e9724c", "#2ec4b6", "#70e000", "#f94144"],
+                          title='Avaliação do Gestor Imediato',
+                          orientation='h')
+bar_char_gestor.update_xaxes(showgrid=False,visible = False)
+bar_char_gestor.update_traces(showlegend=False)
+bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
+bar_char_gestor.layout.xaxis.fixedrange = True
+bar_char_gestor.layout.yaxis.fixedrange = True
 
 
 
