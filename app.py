@@ -238,7 +238,7 @@ borderselect = """
     padding: 15px;
     background-color: #003459;
     border-radius: 12px;
-    opacity: 95%;
+    opacity: 80%;
     text-align: center;
     }
     </style>
