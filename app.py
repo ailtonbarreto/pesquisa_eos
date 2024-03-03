@@ -146,7 +146,7 @@ pie_chart_valor = px.pie(dfpie_valor,names='Conexão com Colegas',color_discrete
 #-----------------------------------------------------------------------------------------------------------------------------
 #Avaliacao equipe de gestao
 
-bar_chart_gestor = px.bar(contagem_categorias, 
+bar_char_gestor = px.bar(contagem_categorias, 
                           x="count",  # Contagem das categorias será o eixo x
                           y=contagem_categorias.index,  # As categorias serão o eixo y
                           color=contagem_categorias.index,  # Colorir as barras com base nas categorias
