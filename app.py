@@ -70,6 +70,7 @@ dfpie_valor = df["Conexão com Colegas"].value_counts().reset_index()
 #dataframe gestor
 
 categorias = {'Muito bom': 'Muito bom','Ótimo': 'Ótimo','Bom': 'Bom','Ruim': 'Ruim','Péssimo': 'Péssimo','Excelente':'Excelente','Muito ruim':'Muito ruim'}
+categorias_order = {'Muito bom','Ótimo','Bom','Ruim','Péssimo','Excelente','Muito ruim'}
 
 
 
@@ -143,7 +144,7 @@ pie_chart_valor = px.pie(dfpie_valor,names='Conexão com Colegas',color_discrete
 #-----------------------------------------------------------------------------------------------------------------------------
 #Avaliacao equipe de gestao
 
-bar_char_gestor = px.bar(contagem_categorias, x=contagem_categorias.values, y=contagem_categorias.index,category_orders={categorias},
+bar_char_gestor = px.bar(contagem_categorias, x=contagem_categorias.values, y=contagem_categorias.index,category_orders=categorias_order,
                 color=contagem_categorias.index,color_discrete_sequence=["#38b000","#00a8e8","#12b2fe","#e9724c","#2ec4b6","#70e000","#f94144"],
                 title='Avaliação do Gestor Imediato',orientation='h')
 bar_char_gestor.update_xaxes(showgrid=False,visible = False)
