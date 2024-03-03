@@ -152,7 +152,6 @@ bar_char_gestor = px.bar(contagem_categorias,
                           color=contagem_categorias.index,
                           color_discrete_sequence=["#38b000", "#00a8e8", "#12b2fe", "#e9724c", "#2ec4b6", "#70e000", "#f94144"],
                           title='Avaliação do Gestor Imediato',
-                          category_orders={'Categoria':categorias},
                           orientation='h')
 bar_char_gestor.update_xaxes(showgrid=False,visible = False)
 bar_char_gestor.update_traces(showlegend=False)
@@ -219,8 +218,7 @@ st.divider()
 with st.expander("Acessar Pesquisa",expanded=False):
     st.image("link.png",width=300)
     st.link_button("Acessar",url ='https://docs.google.com/forms/d/e/1FAIpQLSeyzFMc7bFvPgmHreIAOhIWOB9PugK7NfAIpbEr6ReXJORfjg/viewform?usp=sf_link')
- 
-
+  
     
 #-----------------------------------------------------------------------------------------------------------------------------
 #CSS
