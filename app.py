@@ -103,9 +103,19 @@ contagem_avaliacoes = contagem_avaliacoes.query('Gestor == @filtro_gestor')
 contagem_avaliacoes = contagem_avaliacoes.sort_values('Contagem',ascending=False)
 
 df_felicidade = round(df['Nivel de Felicidade'].mean())
+#-----------------------------------------------------------------------------------------------------------------------------
+#emoji nivel de felicidade
 
-
-    
+if df_felicidade == 1:
+    emoji = "😕"
+elif df_felicidade == 2:
+    emoji = "🙁"
+elif df_felicidade == 3:
+    emoji = "🙂"
+elif df_felicidade == 4:
+    emoji = "😄"
+else:
+    emoji = "😁"  
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #charts
@@ -164,7 +174,7 @@ with col2:
 with col3:
     st.metric("Se Sentem Valorizados",f'{nivel_satisfacao} 🏆')    
 with col4:
-    st.metric("Média Felicidade",f'{df_felicidade} 😀')
+    st.metric("Média Felicidade",f'{df_felicidade} {emoji}')
 with col5:
     st.metric("Aprovação Gestão",f'{aprovacao} 👍')
 
