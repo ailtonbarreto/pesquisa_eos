@@ -144,7 +144,7 @@ pie_chart_valor = px.pie(dfpie_valor,names='Conexão com Colegas',color_discrete
 #Avaliacao equipe de gestao
 
 bar_char_gestor = px.bar(contagem_categorias, x=contagem_categorias.values, y=contagem_categorias.index,
-                color='Como você avalia o seu Gestor?',
+                color_discrete_sequence=["#ffffff","#ffffff"],
                 title='Avaliação do Gestor Imediato',orientation='h')
 bar_char_gestor.update_xaxes(showgrid=False,visible = False)
 bar_char_gestor.update_traces(showlegend=False)
