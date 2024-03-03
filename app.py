@@ -90,7 +90,7 @@ count_sim = (df['Você Aprova a Forma como a Empresa é Dirigida?'] == 'Sim').su
 aprovacao = (count_sim/df_aprogestao)*100
 aprovacao = "{:.0f}%".format(aprovacao)
 
-qtd_funcionario = df_count - 20
+qtd_funcionario = df_count + 20
 
 with col10:
     filtro_gestor = st.multiselect("Filtrar Gestor", df['Gestor'].unique(), default=df['Gestor'].unique())
