@@ -257,7 +257,7 @@ expander = """
     <style>
     [data-testid="stExpander"]
     {
-    color: center;
+    background-color: #003459;
     }
     </style>
 """
