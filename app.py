@@ -53,8 +53,6 @@ dfbar = df
 dfbar = dfbar.groupby(dfbar["Avaliação"])["Nivel de Felicidade"].count().reset_index()
 dfbar = dfbar.sort_values("Nivel de Felicidade",ascending=False)
 
-
-
 #-----------------------------------------------------------------------------------------------------------------------------
 #dataframe grafico de valorizacao
 
@@ -75,8 +73,9 @@ categorias = {'Muito bom': 1,'Ótimo': 2,'Bom': 3,'Ruim': 4,'Péssimo': 5,'Excel
 df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
 
 
-contagem_categorias = df['Categoria'].value_counts().sort_values(ascending=False)
 
+contagem_categorias = df['Categoria'].value_counts().sort_values(ascending=False)
+contagem_categorias = contagem_categorias.map(categorias)
 
 #-----------------------------------------------------------------------------------------------------------------------------
 df_count = len(df)
