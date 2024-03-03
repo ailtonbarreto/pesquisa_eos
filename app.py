@@ -250,3 +250,15 @@ imagem = """
     </style>
 """
 st.markdown(imagem,unsafe_allow_html=True)
+
+
+
+expander = """
+    <style>
+    [data-testid="stExpander"]
+    {
+    color: center;
+    }
+    </style>
+"""
+st.markdown(expander,unsafe_allow_html=True)
