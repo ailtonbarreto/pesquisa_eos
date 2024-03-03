@@ -198,7 +198,7 @@ st.divider()
 with st.expander("Acessar Pesquisa",expanded=True):
     st.image("link.png",width=300)
     st.link_button("Acessar",url ='https://docs.google.com/forms/d/e/1FAIpQLSeyzFMc7bFvPgmHreIAOhIWOB9PugK7NfAIpbEr6ReXJORfjg/viewform?usp=sf_link')
-    
+st.table(contagem_categorias)   
     
 #-----------------------------------------------------------------------------------------------------------------------------
 #CSS
