@@ -80,8 +80,6 @@ df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
 contagem_categorias = df['Categoria'].value_counts().sort_values(ascending=False)
 
 
-
-
 #-----------------------------------------------------------------------------------------------------------------------------
 df_count = len(df)
 count_nao = (df['Valorização'] == 'Sim').sum()
