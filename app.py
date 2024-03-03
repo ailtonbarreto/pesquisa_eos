@@ -74,7 +74,7 @@ valor_order = {'Muito bom': 1, 'Ótimo': 2, 'Bom': 3, 'Ruim': 4, 'Péssimo': 5, 
 
 
 
-df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
+df['Categoria'] = df['Como você avalia o seu Gestor?'].map(valor_order)
 
 contagem_categorias = df['Categoria'].value_counts()
 
