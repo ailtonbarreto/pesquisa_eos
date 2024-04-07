@@ -67,7 +67,7 @@ dfpie_valor = df["Conexão com Colegas"].value_counts().reset_index()
 #-----------------------------------------------------------------------------------------------------------------------------
 #dataframe gestor
 
-categorias = {'Muito bom': 'Muito bom','Ótimo': 'Ótimo','Bom': 'Bom','Ruim': 'Ruim','Péssimo': 'Péssimo','Excelente':'Excelente','Muito ruim':'Muito ruim'}
+categorias = {'Bom': 'Bom','Ruim': 'Ruim','Médio': 'Médio'}
 
 
 #-----------------------------------------------------------------------------------------------------------------------------
