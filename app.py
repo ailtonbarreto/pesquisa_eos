@@ -166,7 +166,7 @@ bar_char_gestor.layout.yaxis.fixedrange = True
 #Avaliacao individual de gestor
 
 bar_char_avaliacao = px.bar(contagem_avaliacoes, x='Gestor', y="Contagem",orientation='v',category_orders={'Como você avalia o seu Gestor?':categorias},barmode="stack",
-                    color_discrete_sequence=["#38b000","#00a8e8","#12b2fe"],
+                    color_discrete_sequence=["#38b000","#00a8e8","#C30909"],
                     color='Como você avalia o seu Gestor?', title='Avaliações Por Gestor')
 bar_char_avaliacao.update_xaxes(showgrid=False,visible = True)
 bar_char_avaliacao.update_yaxes(showgrid=False,visible=False,title="")
