@@ -125,7 +125,7 @@ else:
 #charts
 
 
-bar_chart = px.bar(dfbar, x="Nivel de Felicidade", y='Avaliação',orientation="h",title="Nível de Felicidade",text=dfbar["Avaliação"],
+bar_chart = px.bar(dfbar, x="Nivel de Felicidade", y='Avaliação',orientation="h",title="Nível de Felicidade",text=dfbar["Nivel de Felicidade"],
                 color="Avaliação",color_discrete_sequence=["#ffffff","#ffffff"])
 bar_chart.update_xaxes(showgrid=False,visible = False)
 bar_chart.update_traces(showlegend=False)
