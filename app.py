@@ -95,7 +95,7 @@ qtd_funcionario = df_count + 20
 
 contagem_avaliacoes = df.groupby(['Gestor', 'Como você avalia o seu Gestor?']).size().reset_index(name='Contagem')
 
-contagem_avaliacoes = contagem_avaliacoes.sort_values('Contagem',ascending=False)
+contagem_avaliacoes = contagem_avaliacoes.sort_values('Gestor',ascending=False)
 
 df_felicidade = round(df['Nivel de Felicidade'].mean())
 
@@ -178,7 +178,7 @@ with col7:
 with col8:
     st.plotly_chart(bar_char_gestor,use_container_width=True)
 with col9:
-    st.write("Avalição dos Gestores",anchor=False)
+    st.write("Avaliação dos Gestores",anchor=False)
     st.dataframe(contagem_avaliacoes,use_container_width=True)
     
 
