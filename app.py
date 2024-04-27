@@ -161,6 +161,7 @@ bar_char_gestor.update_traces(showlegend=False)
 bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
 bar_char_gestor.layout.xaxis.fixedrange = True
 bar_char_gestor.layout.yaxis.fixedrange = True
+bar_char_gestor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
 
 #-----------------------------------------------------------------------------------------------------------------------------
