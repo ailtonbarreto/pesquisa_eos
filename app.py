@@ -124,7 +124,6 @@ else:
 #-----------------------------------------------------------------------------------------------------------------------------
 #charts
 
-
 bar_chart = px.bar(dfbar, x="Nivel de Felicidade", y='Avaliação',orientation="h",title="Nível de Felicidade",text=dfbar["Nivel de Felicidade"],
                 color="Avaliação",color_discrete_sequence=["#ffffff","#ffffff"])
 bar_chart.update_xaxes(showgrid=False,visible = False)
@@ -140,6 +139,7 @@ bar_chart.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="out
 
 pie_chart1 = px.pie(dfpie, names="Valorização", values='count',color_discrete_sequence=["#06d6a0","#e63946"],
                     title="Sentimento de Valorização do Trabalho",color='Valorização',category_orders={'Valorização':['Sim','Não']})
+pie_chart1.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #grafico sentimento conexao com colegas
