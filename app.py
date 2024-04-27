@@ -199,7 +199,7 @@ with col7:
 with col8:
     st.plotly_chart(bar_char_gestor,use_container_width=True)
 with col9:
-    st.subheader("Avalição dos Gestores",anchor=False)
+    st.text("Avalição dos Gestores",anchor=False)
     st.dataframe(contagem_avaliacoes,use_container_width=True)
     # st.plotly_chart(pie_chart1,use_container_width=True)
 
