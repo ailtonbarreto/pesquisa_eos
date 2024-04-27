@@ -12,7 +12,7 @@ tab1, tab2 = st.tabs(["Home","Dashboard"])
 
 with tab2:
     #layout
-    st.title("Pesquisa de Satisfação Janeiro 2024", anchor= False)
+    st.title("Pesquisa de Satisfação", anchor= False)
     st.divider()
     col1,col2,col3,col4, col5 = st.columns(5)
     col6,col7 = st.columns(2)
