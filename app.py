@@ -14,7 +14,7 @@ st.divider()
 col1,col2,col3,col4, col5 = st.columns(5)
 col6,col7 = st.columns(2)
 col8, col9 = st.columns(2)
-# col10, = st.columns(1)
+
 
 with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html = True)
@@ -91,17 +91,9 @@ aprovacao = "{:.0f}%".format(aprovacao)
 
 qtd_funcionario = df_count + 20
 
-
-#-----------------------------------------------------------------------------------------------------------------------------
-#Layout
-# with col10:
-#     filtro_gestor = st.multiselect("Filtrar Gestor", df['Gestor'].unique(), default=df['Gestor'].unique())
-
 #-----------------------------------------------------------------------------------------------------------------------------
 
 contagem_avaliacoes = df.groupby(['Gestor', 'Como você avalia o seu Gestor?']).size().reset_index(name='Contagem')
-
-# contagem_avaliacoes = contagem_avaliacoes.query('Gestor == @filtro_gestor')
 
 contagem_avaliacoes = contagem_avaliacoes.sort_values('Contagem',ascending=False)
 
@@ -163,19 +155,6 @@ bar_char_gestor.layout.xaxis.fixedrange = True
 bar_char_gestor.layout.yaxis.fixedrange = True
 bar_char_gestor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
-
-#-----------------------------------------------------------------------------------------------------------------------------
-#Avaliacao individual de gestor
-
-# bar_char_avaliacao = px.bar(contagem_avaliacoes, x='Gestor', y="Contagem",orientation='v',category_orders={'Como você avalia o seu Gestor?':categorias},barmode="stack",
-#                     color_discrete_sequence=["#38b000","#00a8e8","#E63946"],
-#                     color='Como você avalia o seu Gestor?', title='Avaliações Por Gestor')
-# bar_char_avaliacao.update_xaxes(showgrid=False,visible = True)
-# bar_char_avaliacao.update_yaxes(showgrid=False,visible=False,title="")
-# bar_char_avaliacao.layout.xaxis.fixedrange = True
-# bar_char_avaliacao.layout.yaxis.fixedrange = True
-
-
 #-----------------------------------------------------------------------------------------------------------------------------
 #Layout
 
@@ -201,13 +180,9 @@ with col8:
 with col9:
     st.write("Avalição dos Gestores",anchor=False)
     st.dataframe(contagem_avaliacoes,use_container_width=True)
-    # st.plotly_chart(pie_chart1,use_container_width=True)
-
-# with col10:
-#     st.plotly_chart(bar_char_avaliacao,use_container_width=True)   
+    
 
 st.divider()
-# st.subheader('Acessar Pesquisa',anchor=False)
 with st.expander("Acessar Pesquisa",expanded=False):
     st.image("link.png",width=300)
     st.link_button("Acessar",url ='https://docs.google.com/forms/d/e/1FAIpQLSeyzFMc7bFvPgmHreIAOhIWOB9PugK7NfAIpbEr6ReXJORfjg/viewform?usp=sf_link')
