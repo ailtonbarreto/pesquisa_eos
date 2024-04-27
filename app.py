@@ -167,13 +167,13 @@ bar_char_gestor.update_traces(textfont=dict(size=20,color='#00ECFB'),textpositio
 #-----------------------------------------------------------------------------------------------------------------------------
 #Avaliacao individual de gestor
 
-bar_char_avaliacao = px.bar(contagem_avaliacoes, x='Gestor', y="Contagem",orientation='v',category_orders={'Como você avalia o seu Gestor?':categorias},barmode="stack",
-                    color_discrete_sequence=["#38b000","#00a8e8","#E63946"],
-                    color='Como você avalia o seu Gestor?', title='Avaliações Por Gestor')
-bar_char_avaliacao.update_xaxes(showgrid=False,visible = True)
-bar_char_avaliacao.update_yaxes(showgrid=False,visible=False,title="")
-bar_char_avaliacao.layout.xaxis.fixedrange = True
-bar_char_avaliacao.layout.yaxis.fixedrange = True
+# bar_char_avaliacao = px.bar(contagem_avaliacoes, x='Gestor', y="Contagem",orientation='v',category_orders={'Como você avalia o seu Gestor?':categorias},barmode="stack",
+#                     color_discrete_sequence=["#38b000","#00a8e8","#E63946"],
+#                     color='Como você avalia o seu Gestor?', title='Avaliações Por Gestor')
+# bar_char_avaliacao.update_xaxes(showgrid=False,visible = True)
+# bar_char_avaliacao.update_yaxes(showgrid=False,visible=False,title="")
+# bar_char_avaliacao.layout.xaxis.fixedrange = True
+# bar_char_avaliacao.layout.yaxis.fixedrange = True
 
 
 #-----------------------------------------------------------------------------------------------------------------------------
@@ -201,8 +201,8 @@ with col8:
 with col9:
     st.plotly_chart(pie_chart1,use_container_width=True)
 
-with col10:
-    st.plotly_chart(bar_char_avaliacao,use_container_width=True)   
+# with col10:
+#     st.plotly_chart(bar_char_avaliacao,use_container_width=True)   
 
 st.divider()
 # st.subheader('Acessar Pesquisa',anchor=False)
