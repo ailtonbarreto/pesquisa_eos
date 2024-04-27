@@ -8,7 +8,7 @@ import plotly_express as px
 
 st.set_page_config(page_title="Pesquisa de Satisfação",layout="wide",page_icon='🔍')
 
-tab1, tab2 = st.tabs["Home","Dashboard"]
+tab1, tab2 = st.tabs(["Home","Dashboard"])
 
 with tab2:
     #layout
