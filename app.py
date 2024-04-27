@@ -132,7 +132,7 @@ bar_chart.update_traces(showlegend=False)
 bar_chart.update_yaxes(showgrid=False,visible=True,title="")
 bar_chart.layout.xaxis.fixedrange = True
 bar_chart.layout.yaxis.fixedrange = True
-bar_chart.update_traces(textfont=dict(size=25,color='#0A7880'),textposition="outside")
+bar_chart.update_traces(textfont=dict(size=25,color='#00ECFB'),textposition="outside")
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #grafico sentimento de valorizacao na empresa
