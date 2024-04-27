@@ -129,7 +129,7 @@ bar_chart = px.bar(dfbar, x="Nivel de Felicidade", y='Avaliação',orientation="
                 color="Avaliação",color_discrete_sequence=["#ffffff","#ffffff"])
 bar_chart.update_xaxes(showgrid=False,visible = False)
 bar_chart.update_traces(showlegend=False)
-bar_chart.update_yaxes(showgrid=False,visible=True,title=""textfont=dict(size=20,color='#00ECFB'))
+bar_chart.update_yaxes(showgrid=False,visible=True,title="",textfont=dict(size=20,color='#00ECFB'))
 bar_chart.layout.xaxis.fixedrange = True
 bar_chart.layout.yaxis.fixedrange = True
 bar_chart.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
