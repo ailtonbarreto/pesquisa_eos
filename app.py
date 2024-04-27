@@ -101,7 +101,7 @@ qtd_funcionario = df_count + 20
 
 contagem_avaliacoes = df.groupby(['Gestor', 'Como você avalia o seu Gestor?']).size().reset_index(name='Contagem')
 
-contagem_avaliacoes = contagem_avaliacoes.query('Gestor == @filtro_gestor')
+# contagem_avaliacoes = contagem_avaliacoes.query('Gestor == @filtro_gestor')
 
 contagem_avaliacoes = contagem_avaliacoes.sort_values('Contagem',ascending=False)
 
