@@ -174,7 +174,7 @@ bar_char_gestor.update_traces(textfont=dict(size=20,color='#00ECFB'),textpositio
 # bar_char_avaliacao.update_yaxes(showgrid=False,visible=False,title="")
 # bar_char_avaliacao.layout.xaxis.fixedrange = True
 # bar_char_avaliacao.layout.yaxis.fixedrange = True
-tabela = st.dataframe(contagem_avaliacoes)
+
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #Layout
@@ -199,7 +199,7 @@ with col7:
 with col8:
     st.plotly_chart(bar_char_gestor,use_container_width=True)
 with col9:
-    st.plotly_chart(tabela)
+    st.dataframe(contagem_avaliacoes)
     # st.plotly_chart(pie_chart1,use_container_width=True)
 
 # with col10:
