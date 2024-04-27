@@ -94,8 +94,8 @@ qtd_funcionario = df_count + 20
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #Layout
-with col10:
-    filtro_gestor = st.multiselect("Filtrar Gestor", df['Gestor'].unique(), default=df['Gestor'].unique())
+# with col10:
+#     filtro_gestor = st.multiselect("Filtrar Gestor", df['Gestor'].unique(), default=df['Gestor'].unique())
 
 #-----------------------------------------------------------------------------------------------------------------------------
 
