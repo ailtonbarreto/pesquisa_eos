@@ -179,7 +179,7 @@ with col8:
     st.plotly_chart(bar_char_gestor,use_container_width=True)
 with col9:
     st.write("Avaliação dos Gestores",anchor=False)
-    st.dataframe(contagem_avaliacoes,use_container_width=True)
+    st.dataframe(contagem_avaliacoes,use_container_width=True,hide_index=True)
     
 with st.expander("Acessar Pesquisa",expanded=False):
     st.image("link.png",width=300)
