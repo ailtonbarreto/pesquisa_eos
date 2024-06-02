@@ -54,15 +54,11 @@ dfbar = dfbar.groupby(dfbar["Avaliação"])["Nivel de Felicidade"].count().reset
 dfbar = dfbar.sort_values("Nivel de Felicidade",ascending=False)
 
 #-----------------------------------------------------------------------------------------------------------------------------
-#dataframe grafico de valorizacao
-
-dfpie = df["Valorização"].value_counts().reset_index()
-
-#-----------------------------------------------------------------------------------------------------------------------------
 #dataframe grafico conexao
 
 dfpie_valor = df
 dfpie_valor = df["Conexão com Colegas"].value_counts().reset_index()
+dfpie_valor['Sentimento'] = dfpie_valor['index']
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #dataframe gestor
@@ -99,8 +95,9 @@ contagem_avaliacoes = contagem_avaliacoes.sort_values('Gestor',ascending=False)
 
 df_felicidade = round(df['Nivel de Felicidade'].mean())
 
+
 #-----------------------------------------------------------------------------------------------------------------------------
-#emoji nivel de felicidade
+# emoji nivel de felicidade
 
 if df_felicidade == 1:
     emoji = "😕"
@@ -125,27 +122,20 @@ bar_chart.layout.xaxis.fixedrange = True
 bar_chart.layout.yaxis.fixedrange = True
 bar_chart.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
-#-----------------------------------------------------------------------------------------------------------------------------
-#grafico sentimento de valorizacao na empresa
-
-
-pie_chart1 = px.pie(dfpie, names="Valorização", values='count',color_discrete_sequence=["#06d6a0","#e63946"],
-                    title="Sentimento de Valorização do Trabalho",color='Valorização',category_orders={'Valorização':['Sim','Não']})
-pie_chart1.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
 #-----------------------------------------------------------------------------------------------------------------------------
-#grafico sentimento conexao com colegas
+#sentimento conexao com colegas
 
-pie_chart_valor = px.pie(dfpie_valor,names='Conexão com Colegas',color_discrete_sequence=["#06d6a0","#e63946"],
+pie_chart_valor = px.pie(dfpie_valor,names='Sentimento',color_discrete_sequence=["#06d6a0","#e63946"],
                     category_orders={'Valorização':['Sim','Não']},color='Conexão com Colegas',
-                    values='count',title='Sentimento de Conexão com Colegas')
+                    values='Conexão com Colegas',title='Sentimento de Conexão com Colegas')
 pie_chart_valor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #Avaliacao equipe de gestao
 
 
-bar_char_gestor = px.bar(contagem_categorias, x="count", y=contagem_categorias.index,text=contagem_categorias,
+bar_char_gestor = px.bar(contagem_categorias, x="Categoria", y=contagem_categorias.index,text=contagem_categorias,
                 color=contagem_categorias.index,color_discrete_sequence=["#ffffff","#ffffff"],
                 title='Avaliação do Gestor Imediato',orientation='h')
 bar_char_gestor.update_xaxes(showgrid=False,visible = False)
