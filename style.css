@@ -7,8 +7,7 @@ footer{
 }
 
 section{
-    /* background-image: url('https://storage.pixteller.com/designs/designs-images/2019-03-27/04/business-background-backgrounds-business-1-5c9b8f7cbee33.png'); */
-    background-color: white;
+     background: radial-gradient(black,rgb(1, 1, 61));
 }
 
 h1{
