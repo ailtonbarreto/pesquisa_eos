@@ -120,10 +120,10 @@ bar_chart.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="out
 #-----------------------------------------------------------------------------------------------------------------------------
 # sentimento conexao com colegas
 
-# pie_chart_valor = px.pie(dfpie_valor,names='Sentimento',color_discrete_sequence=["#06d6a0","#e63946"],
-#                     category_orders={'Valorização':['Sim','Não']},color='Sentimento',
-#                     values='Counts',title='Sentimento de Conexão com Colegas')
-# pie_chart_valor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
+pie_chart_valor = px.pie(dfpie_valor,names='Conexão com Colegas',color_discrete_sequence=["#06d6a0","#e63946"],
+                    category_orders={'Valorização':['Sim','Não']},color='Conexão com Colegas',
+                    values='count',title='Sentimento de Conexão com Colegas')
+pie_chart_valor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
 #-----------------------------------------------------------------------------------------------------------------------------
 # Avaliacao equipe de gestao
