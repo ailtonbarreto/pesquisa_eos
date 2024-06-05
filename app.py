@@ -137,7 +137,7 @@ pie_chart_valor.update_traces(textfont=dict(size=20,color='#00ECFB'),textpositio
 #Avaliacao equipe de gestao
 
 
-bar_char_gestor = px.bar(contagem_categorias, x='Categoria', y='count',
+bar_char_gestor = px.bar(contagem_categorias, x='count', y='Categoria',
                 color='Categoria',color_discrete_sequence=["#ffffff","#ffffff"],
                 title='Avaliação do Gestor Imediato',orientation='h')
 bar_char_gestor.update_xaxes(showgrid=False,visible = False)
