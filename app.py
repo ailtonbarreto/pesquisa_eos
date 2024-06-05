@@ -58,8 +58,8 @@ dfbar = dfbar.sort_values("Nivel de Felicidade",ascending=False)
 
 dfpie_valor = df
 dfpie_valor = df["Conexão com Colegas"].value_counts().reset_index()
-dfpie_valor['Sentimento'] = dfpie_valor['index']
-st.table(dfpie_valor)
+dfpie_valor.columns = ['Sentimento', 'Counts']
+
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #dataframe gestor
@@ -128,8 +128,8 @@ bar_chart.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="out
 #sentimento conexao com colegas
 
 pie_chart_valor = px.pie(dfpie_valor,names='Sentimento',color_discrete_sequence=["#06d6a0","#e63946"],
-                    category_orders={'Valorização':['Sim','Não']},color='Conexão com Colegas',
-                    values='Conexão com Colegas',title='Sentimento de Conexão com Colegas')
+                    category_orders={'Valorização':['Sim','Não']},color='Sentimento',
+                    values='Counts',title='Sentimento de Conexão com Colegas')
 pie_chart_valor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
 #-----------------------------------------------------------------------------------------------------------------------------
