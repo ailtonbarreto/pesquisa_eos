@@ -58,22 +58,15 @@ dfbar = dfbar.sort_values("Nivel de Felicidade",ascending=False)
 
 dfpie_valor = df
 dfpie_valor = df["Conexão com Colegas"].value_counts().reset_index()
-dfpie_valor.columns = ['Sentimento', 'Counts']
+st.dataframe(dfpie_valor)
 
+#-----------------------------------------------------------------------------------------------------------------------------
+#dataframe avaliacao gestor imediato
 
 categorias = {'Bom': 'Bom','Médio': 'Médio','Ruim': 'Ruim'}
-
-
-
 df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
-
-
 df_contagem = df.groupby('Categoria')['Como você avalia o seu Gestor?'].value_counts().reset_index()
-
 df_contagem = df_contagem.sort_values('count',ascending=False)
-
-st.dataframe(df_contagem)
-
 
 #-----------------------------------------------------------------------------------------------------------------------------
 df_count = len(df)
