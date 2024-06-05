@@ -132,17 +132,17 @@ bar_chart.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="out
 # pie_chart_valor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
 #-----------------------------------------------------------------------------------------------------------------------------
-#Avaliacao equipe de gestao
+# Avaliacao equipe de gestao
 
-# bar_char_gestor = px.bar(contagem_categorias, x='count', y='Categoria',
-#                 color='Categoria',color_discrete_sequence=["#ffffff","#ffffff"],
-#                 title='Avaliação do Gestor Imediato',orientation='h')
-# bar_char_gestor.update_xaxes(showgrid=False,visible = False)
-# bar_char_gestor.update_traces(showlegend=False)
-# bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
-# bar_char_gestor.layout.xaxis.fixedrange = True
-# bar_char_gestor.layout.yaxis.fixedrange = True
-# bar_char_gestor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
+bar_char_gestor = px.bar(df_contagem, x='count', y='Categoria',
+                color='Categoria',color_discrete_sequence=["#ffffff","#ffffff"],
+                title='Avaliação do Gestor Imediato',orientation='h')
+bar_char_gestor.update_xaxes(showgrid=False,visible = False)
+bar_char_gestor.update_traces(showlegend=False)
+bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
+bar_char_gestor.layout.xaxis.fixedrange = True
+bar_char_gestor.layout.yaxis.fixedrange = True
+bar_char_gestor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #Layout
