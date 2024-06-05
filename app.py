@@ -61,7 +61,6 @@ dfpie_valor = df["Conexão com Colegas"].value_counts().reset_index()
 dfpie_valor.columns = ['Sentimento', 'Counts']
 
 
-
 categorias = {'Bom': 'Bom','Médio': 'Médio','Ruim': 'Ruim'}
 
 
@@ -69,10 +68,10 @@ categorias = {'Bom': 'Bom','Médio': 'Médio','Ruim': 'Ruim'}
 df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
 
 
-df_contagem = df['Categoria'].value_counts().sort_values(ascending=False)
+df_contagem = df.groupby('Categoria')['Como você avalia o seu Gestor?'].value_counts().reset_index()
 
 
-st.dataframe(df)
+st.dataframe(df_contagem)
 
 
 #-----------------------------------------------------------------------------------------------------------------------------
