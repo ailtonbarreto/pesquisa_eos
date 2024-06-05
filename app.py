@@ -128,10 +128,10 @@ bar_chart.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="out
 #-----------------------------------------------------------------------------------------------------------------------------
 #sentimento conexao com colegas
 
-pie_chart_valor = px.pie(dfpie_valor,names='Sentimento',color_discrete_sequence=["#06d6a0","#e63946"],
-                    category_orders={'Valorização':['Sim','Não']},color='Sentimento',
-                    values='Counts',title='Sentimento de Conexão com Colegas')
-pie_chart_valor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
+# pie_chart_valor = px.pie(dfpie_valor,names='Sentimento',color_discrete_sequence=["#06d6a0","#e63946"],
+#                     category_orders={'Valorização':['Sim','Não']},color='Sentimento',
+#                     values='Counts',title='Sentimento de Conexão com Colegas')
+# pie_chart_valor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #Avaliacao equipe de gestao
@@ -165,8 +165,8 @@ with col5:
 with col6:
     st.plotly_chart(bar_chart,use_container_width=True)
 with col7:
-    st.plotly_chart(pie_chart_valor,use_container_width=True)   
-    
+    # st.plotly_chart(pie_chart_valor,use_container_width=True)   
+    st.plotly_chart(bar_char_gestor,use_container_width=True)
 with col8:
     st.plotly_chart(bar_char_gestor,use_container_width=True)
 with col9:
