@@ -68,7 +68,7 @@ categorias = {'Bom': 'Bom','Médio': 'Médio','Ruim': 'Ruim'}
 df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
 
 
-df_contagem = df.groupby('Categoria').value_counts().reset_index()
+df_contagem = df.groupby('Categoria')['Como você avalia o seu Gestor?'].value_counts().reset_index()
 
 
 st.dataframe(df_contagem)
