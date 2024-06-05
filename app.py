@@ -71,7 +71,7 @@ categorias = {'Bom': 'Bom','Médio': 'Médio','Ruim': 'Ruim'}
 df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
 
 
-contagem_categorias = df['Categoria'].value_counts().sort_values(ascending=False)
+df_contagem = df['Categoria'].value_counts().sort_values(ascending=False)
 
 st.dataframe(contagem_categorias)
 
