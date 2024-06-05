@@ -126,26 +126,26 @@ bar_chart.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="out
 
 
 #-----------------------------------------------------------------------------------------------------------------------------
-#sentimento conexao com colegas
+# sentimento conexao com colegas
 
-# pie_chart_valor = px.pie(dfpie_valor,names='Sentimento',color_discrete_sequence=["#06d6a0","#e63946"],
-#                     category_orders={'Valorização':['Sim','Não']},color='Sentimento',
-#                     values='Counts',title='Sentimento de Conexão com Colegas')
-# pie_chart_valor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
+pie_chart_valor = px.pie(dfpie_valor,names='Sentimento',color_discrete_sequence=["#06d6a0","#e63946"],
+                    category_orders={'Valorização':['Sim','Não']},color='Sentimento',
+                    values='Counts',title='Sentimento de Conexão com Colegas')
+pie_chart_valor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #Avaliacao equipe de gestao
 
 
-bar_char_gestor = px.bar(contagem_categorias, x='count', y='Categoria',
-                color='Categoria',color_discrete_sequence=["#ffffff","#ffffff"],
-                title='Avaliação do Gestor Imediato',orientation='v')
-bar_char_gestor.update_xaxes(showgrid=False,visible = False)
-bar_char_gestor.update_traces(showlegend=False)
-bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
-bar_char_gestor.layout.xaxis.fixedrange = True
-bar_char_gestor.layout.yaxis.fixedrange = True
-bar_char_gestor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
+# bar_char_gestor = px.bar(contagem_categorias, x='count', y='Categoria',
+#                 color='Categoria',color_discrete_sequence=["#ffffff","#ffffff"],
+#                 title='Avaliação do Gestor Imediato',orientation='v')
+# bar_char_gestor.update_xaxes(showgrid=False,visible = False)
+# bar_char_gestor.update_traces(showlegend=False)
+# bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
+# bar_char_gestor.layout.xaxis.fixedrange = True
+# bar_char_gestor.layout.yaxis.fixedrange = True
+# bar_char_gestor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #Layout
@@ -165,10 +165,11 @@ with col5:
 with col6:
     st.plotly_chart(bar_chart,use_container_width=True)
 with col7:
-    # st.plotly_chart(pie_chart_valor,use_container_width=True)   
-    st.plotly_chart(bar_char_gestor,use_container_width=True)
+    st.plotly_chart(pie_chart_valor,use_container_width=True)   
+
 with col8:
-    st.plotly_chart(bar_char_gestor,use_container_width=True)
+    # st.plotly_chart(bar_char_gestor,use_container_width=True)
+    st.plotly_chart(pie_chart_valor,use_container_width=True) 
 with col9:
     st.write("Avaliação dos Gestores",anchor=False)
     st.dataframe(contagem_avaliacoes,use_container_width=True,hide_index=True)
