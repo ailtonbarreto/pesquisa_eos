@@ -70,7 +70,7 @@ df['Categoria'] = df['Como você avalia o seu Gestor?'].map(categorias)
 
 df_contagem = df.groupby('Categoria')['Como você avalia o seu Gestor?'].value_counts().reset_index()
 
-df_contagem = df_contagem.sort_values('count',ascending=True)
+df_contagem = df_contagem.sort_values('count',ascending=False)
 
 st.dataframe(df_contagem)
 
