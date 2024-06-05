@@ -59,6 +59,7 @@ dfbar = dfbar.sort_values("Nivel de Felicidade",ascending=False)
 dfpie_valor = df
 dfpie_valor = df["Conexão com Colegas"].value_counts().reset_index()
 dfpie_valor['Sentimento'] = dfpie_valor['index']
+st.table(dfpie_valor)
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #dataframe gestor
