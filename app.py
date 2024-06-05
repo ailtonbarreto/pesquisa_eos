@@ -136,7 +136,8 @@ pie_chart_valor.update_traces(textfont=dict(size=20,color='#00ECFB'),textpositio
 #-----------------------------------------------------------------------------------------------------------------------------
 #Avaliacao equipe de gestao
 
-barchargestor = px.bar(contagem_categorias,x='Categoria',y='count',orientation='v')
+barchargestor = px.bar(contagem_categorias, x='Categoria', y='Count')
+
 st.write(barchargestor)
 # bar_char_gestor = px.bar(contagem_categorias, x='count', y='Categoria',
 #                 color='Categoria',color_discrete_sequence=["#ffffff","#ffffff"],
