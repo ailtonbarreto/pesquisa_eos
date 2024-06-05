@@ -135,7 +135,7 @@ bar_chart.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="out
 #-----------------------------------------------------------------------------------------------------------------------------
 # Avaliacao equipe de gestao
 
-bar_char_gestor = px.bar(df_contagem, x='count', y='Categoria',
+bar_char_gestor = px.bar(df_contagem, x='count', y='Categoria',text=df_contagem["count"],
                 color='Categoria',color_discrete_sequence=["#ffffff","#ffffff"],
                 title='Avaliação do Gestor Imediato',orientation='h')
 bar_char_gestor.update_xaxes(showgrid=False,visible = False)
