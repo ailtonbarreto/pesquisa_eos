@@ -223,7 +223,7 @@ imagem = """
     <style>
     [class="st-emotion-cache-1kyxreq e115fcil2"]
     {
-        align-items: center;
+    align-items: center;
     }
     </style>
 """
