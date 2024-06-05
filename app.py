@@ -57,7 +57,7 @@ dfbar = dfbar.sort_values("Nivel de Felicidade",ascending=False)
 #dataframe grafico conexao
 
 dfpie_valor = df
-dfpie_valor = df["Conexão com Colegas"].value_counts().reset_index()
+
 st.dataframe(dfpie_valor)
 
 #-----------------------------------------------------------------------------------------------------------------------------
