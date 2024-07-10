@@ -14,6 +14,7 @@ st.divider()
 col1,col2,col3,col4, col5 = st.columns(5)
 col6,col7 = st.columns(2)
 col8, col9 = st.columns(2)
+col10, = st.columns(1)
 
 
 with open("style.css") as f:
@@ -163,7 +164,8 @@ with col9:
     st.write("Avaliação dos Gestores",anchor=False)
     st.dataframe(contagem_avaliacoes,use_container_width=True,hide_index=True)
     
-with st.expander("Acessar Pesquisa",expanded=False):
+with col10:
+    st.subheader("Acessar Formulário")
     st.image("link.png",width=300)
     st.link_button("Acessar",url ='https://docs.google.com/forms/d/e/1FAIpQLSeyzFMc7bFvPgmHreIAOhIWOB9PugK7NfAIpbEr6ReXJORfjg/viewform?usp=sf_link')
   
