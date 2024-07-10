@@ -163,7 +163,7 @@ with col8:
 with col9:
     st.write("Avaliação dos Gestores",anchor=False)
     st.dataframe(contagem_avaliacoes,use_container_width=True,hide_index=True)
-
+st.divider()
 st.subheader("Acessar Formulário",anchor=False)
 st.image("link.png",width=300,)
    
