@@ -177,7 +177,7 @@ borderselect = """
     [data-testid="column"]
     {
     padding: 15px;
-    background-color: #003459;
+    background-color: #001d3d;
     border-radius: 12px;
     opacity: 97%;
     text-align: center;
