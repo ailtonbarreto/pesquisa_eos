@@ -164,7 +164,6 @@ with col9:
     st.write("Avaliação dos Gestores",anchor=False)
     st.dataframe(contagem_avaliacoes,use_container_width=True,hide_index=True)
     
-a  
     st.subheader("Acessar Formulário",anchor = 'https://docs.google.com/forms/d/e/1FAIpQLSeyzFMc7bFvPgmHreIAOhIWOB9PugK7NfAIpbEr6ReXJORfjg/viewform?usp=sf_link')
     st.image("link.png",width=300,)
    
