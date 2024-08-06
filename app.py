@@ -6,7 +6,7 @@ import plotly_express as px
 #-----------------------------------------------------------------------------------------------------------------------------
 #Configuracao da pagina
 
-st.set_page_config(page_title="Pesquisa de Satisfação",layout="wide",page_icon='🔍')
+st.set_page_config(page_title="Pesquisa de Satisfação",layout="wide",page_icon='📊')
 
 #layout
 st.title("Pesquisa de Satisfação", anchor= False)
