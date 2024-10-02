@@ -175,7 +175,7 @@ st.image("link.png",width=300,)
 
 borderselect = """
     <style>
-    [data-testid="column"]
+    [data-testid="stColumn"]
     {
     padding: 15px;
     background-color: #001d3d;
