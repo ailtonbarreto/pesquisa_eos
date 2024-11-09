@@ -239,9 +239,10 @@ st.markdown(expander,unsafe_allow_html=True)
 
 footer = """
     <style>
-    [data-testid="manage-app-button"]
+    [data-testid="stFullScreenFrame""]
     {
-    display: none;
+    display: flex:;
+    justify-content: center;
     }
     </style>
 """
