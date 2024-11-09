@@ -239,7 +239,7 @@ st.markdown(expander,unsafe_allow_html=True)
 
 footer = """
     <style>
-    [class="_terminalButton_rix23_138"]
+    [data-testid="manage-app-button"]
     {
     background-color: #003459;
     padding: 10px;
