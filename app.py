@@ -235,3 +235,16 @@ expander = """
     </style>
 """
 st.markdown(expander,unsafe_allow_html=True)
+
+
+footer = """
+    <style>
+    [class="_terminalButton_rix23_138"]
+    {
+    background-color: #003459;
+    padding: 10px;
+    border-radius: 12px;
+    }
+    </style>
+"""
+st.markdown(footer,unsafe_allow_html=True)
