@@ -241,8 +241,8 @@ footer = """
     <style>
     [data-testid="stFullScreenFrame""]
     {
-    display: flex:;
-    text-items: center;
+    text-align: center;
+    display: flex;
     justify-content: center;
     }
     </style>
