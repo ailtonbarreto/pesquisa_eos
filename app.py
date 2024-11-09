@@ -241,9 +241,7 @@ footer = """
     <style>
     [data-testid="manage-app-button"]
     {
-    background-color: #003459;
-    padding: 10px;
-    border-radius: 12px;
+    display: none;
     }
     </style>
 """
