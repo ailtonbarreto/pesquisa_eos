@@ -242,7 +242,7 @@ footer = """
     [data-testid="stFullScreenFrame""]
     {
     display: flex:;
-    align-items: center;
+    text-items: center;
     justify-content: center;
     }
     </style>
