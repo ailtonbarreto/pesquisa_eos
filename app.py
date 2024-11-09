@@ -237,14 +237,14 @@ expander = """
 st.markdown(expander,unsafe_allow_html=True)
 
 
-footer = """
-    <style>
-    [data-testid="stFullScreenFrame""]
-    {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    }
-    </style>
-"""
-st.markdown(footer,unsafe_allow_html=True)
+# footer = """
+#     <style>
+#     [data-testid="stFullScreenFrame""]
+#     {
+#     text-align: center;
+#     display: flex;
+#     justify-content: center;
+#     }
+#     </style>
+# """
+# st.markdown(footer,unsafe_allow_html=True)
