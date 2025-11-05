@@ -161,7 +161,7 @@ with col7:
 with col8:
     st.plotly_chart(bar_char_gestor,use_container_width=True)
 with col9:
-    st.write("Avaliação dos Gestores",anchor=False)
+    st.write("Avaliação dos Gestores")
     st.dataframe(contagem_avaliacoes,use_container_width=True,hide_index=True)
 st.divider()
 st.subheader("Acessar Formulário",anchor=False)
