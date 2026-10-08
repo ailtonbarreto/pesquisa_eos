@@ -108,14 +108,22 @@ else:
 #-----------------------------------------------------------------------------------------------------------------------------
 #charts
 
-bar_chart = px.bar(dfbar, x="Nivel de Felicidade", y='Avaliação',orientation="h",title="Nível de Felicidade",text=dfbar["Nivel de Felicidade"],
-                color="Avaliação",color_discrete_sequence=["#ffffff","#ffffff"])
+bar_chart = px.bar(dfbar,
+                x="Nivel de Felicidade",
+                y='Avaliação',orientation="h",
+                title="Nível de Felicidade",
+                text=dfbar["Nivel de Felicidade"],
+                color="Avaliação",
+                color_discrete_sequence=["#ffffff","#ffffff"])
+
 bar_chart.update_xaxes(showgrid=False,visible = False)
 bar_chart.update_traces(showlegend=False)
 bar_chart.update_yaxes(showgrid=False,visible=True,title="",color='#00ECFB')
 bar_chart.layout.xaxis.fixedrange = True
 bar_chart.layout.yaxis.fixedrange = True
+bar_chart.update_traces(marker=dict(line=dict(width=0)), width=0.6)
 bar_chart.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
+
 
 
 #-----------------------------------------------------------------------------------------------------------------------------
@@ -137,7 +145,8 @@ bar_char_gestor.update_traces(showlegend=False)
 bar_char_gestor.update_yaxes(showgrid=False,visible=True,title="")
 bar_char_gestor.layout.xaxis.fixedrange = True
 bar_char_gestor.layout.yaxis.fixedrange = True
-bar_char_gestor.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="outside")
+bar_char_gestor.update_traces(marker=dict(line=dict(width=0)), width=0.4)
+bar_char_gestor.update_traces(textfont=dict(size=40,color='#00ECFB'),textposition="outside")
 
 #-----------------------------------------------------------------------------------------------------------------------------
 #Layout
@@ -155,14 +164,14 @@ with col5:
     st.metric("Aprovação Gestão",f'{aprovacao} 👍')
 
 with col6:
-    st.plotly_chart(bar_chart,use_container_width=True)
+    st.plotly_chart(bar_chart,width=900)
 with col7:
-    st.plotly_chart(pie_chart_valor,use_container_width=True)   
+    st.plotly_chart(pie_chart_valor,width=900)   
 with col8:
-    st.plotly_chart(bar_char_gestor,use_container_width=True)
+    st.plotly_chart(bar_char_gestor,width=900)
 with col9:
     st.write("Avaliação dos Gestores")
-    st.dataframe(contagem_avaliacoes,use_container_width=True,hide_index=True)
+    st.dataframe(contagem_avaliacoes,width=900,hide_index=True)
 st.divider()
 st.subheader("Acessar Formulário",anchor=False)
 st.image("link.png",width=300,)
@@ -236,15 +245,3 @@ expander = """
 """
 st.markdown(expander,unsafe_allow_html=True)
 
-
-# footer = """
-#     <style>
-#     [data-testid="stFullScreenFrame""]
-#     {
-#     text-align: center;
-#     display: flex;
-#     justify-content: center;
-#     }
-#     </style>
-# """
-# st.markdown(footer,unsafe_allow_html=True)
