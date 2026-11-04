@@ -16,12 +16,6 @@ col6,col7 = st.columns(2)
 col8, col9 = st.columns(2)
 
 
-
-with open("style.css") as f:
-    st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html = True)
-
-
-
 #-----------------------------------------------------------------------------------------------------------------------------
 #link da planilha de respostas
 
@@ -180,6 +174,16 @@ st.image("link.png",width=300,)
     
 #-----------------------------------------------------------------------------------------------------------------------------
 #CSS
+
+bg = """
+    <style>
+    [data-testid="stApp"]
+    {
+    background-color: #000000;
+    }
+    </style>
+"""
+st.markdown(bg,unsafe_allow_html=True)
 
 
 borderselect = """
